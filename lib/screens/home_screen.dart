@@ -5,6 +5,7 @@ import 'package:compass/screens/info_screen.dart';
 import 'package:compass/widgets/compass_dial_painter.dart';
 import 'package:compass/widgets/compass_letters_painter.dart';
 import 'package:compass/widgets/compass_ticks_painter.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_compass/flutter_compass.dart';
 import 'package:geolocator/geolocator.dart';
@@ -92,8 +93,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               .listen((Position position) {
             setState(() {
               _currentAltitude = position.altitude.toInt();
-              _currentLatitude = position.latitude;
-              _currentLongitude = position.longitude;
+              _currentLatitude =
+                  kDebugMode ? 26.357891974667538 : position.latitude;
+              _currentLongitude =
+                  kDebugMode ? 127.78374690360789 : position.longitude;
               _accuracy = position.accuracy;
             });
           });
