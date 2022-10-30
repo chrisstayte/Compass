@@ -41,7 +41,7 @@ class CompassLettersPainter extends CustomPainter {
           text: TextSpan(
             text: getLetter(i),
             style: TextStyle(
-              color: Colors.black,
+              color: getLetter(i) == 'N' ? Color(0xffF10D0D) : Colors.black,
               fontSize: i % 90 == 0 ? 22 : 14,
               fontWeight: i % 90 == 0 ? FontWeight.w600 : FontWeight.w400,
             ),
