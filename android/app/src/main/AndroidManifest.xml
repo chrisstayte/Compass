@@ -1,6 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.chrisstayte.compass">
-   <application
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
         android:label="compass"
         android:name="${applicationName}"
         android:icon="@mipmap/compass3">
@@ -31,19 +30,4 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
-    <!-- LOCATION FOR GEOLOCATOR PACKAGE & COMPASS PACKAGE -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- NEEDED FOR COMPASS PACKAGE (WHY?) -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <queries>
-        <intent>
-            <action android:name="android.intent.action.VIEW" />
-            <data android:scheme="https" />
-        </intent>
-        <intent>
-            <action android:name="android.intent.action.SEND"/>
-            <data android:scheme="mailto"/>
-        </intent>
-    </queries>
 </manifest>

@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:compass/screens/info_screen.dart';
-import 'package:compass/widgets/compass_dial_painter.dart';
 import 'package:compass/widgets/compass_letters_painter.dart';
 import 'package:compass/widgets/compass_ticks_painter.dart';
 import 'package:flutter/foundation.dart';
@@ -75,6 +74,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       case AppLifecycleState.inactive:
         break;
       case AppLifecycleState.detached:
+        break;
+      case AppLifecycleState.hidden:
         break;
     }
     super.didChangeAppLifecycleState(state);
